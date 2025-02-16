@@ -1,0 +1,25 @@
+{
+	"$schema": "../../node_modules/wrangler/config-schema.json",
+	"name": "api",
+	"main": "src/index.ts",
+	"compatibility_date": "2024-04-01",
+	"vars": {
+		"TRUSTED_ORIGINS": ["http://localhost:3001"],
+		"BETTER_AUTH_SECRET": "secret",
+		"BETTER_AUTH_BASE_URL": "http://localhost:3000"
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_id": "00000000-0000-0000-0000-000000000000",
+			"database_name": "replace-me"
+		}
+	],
+	"kv_namespaces": [
+		{
+			"binding": "KV",
+			"id": "00000000-0000-0000-0000-000000000000",
+			"preview_id": "00000000-0000-0000-0000-000000000000"
+		}
+	]
+}
