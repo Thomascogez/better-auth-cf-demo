@@ -2,19 +2,11 @@ import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { admin, magicLink } from "better-auth/plugins";
 import { drizzle } from "drizzle-orm/d1";
-import * as betterAuthSchemas from "../db/better-auth-schemas";
 
 export const initBetterAuth = (env: Env) => {
 	return betterAuth({
 		database: drizzleAdapter(drizzle(env.DB), {
 			provider: "sqlite",
-			usePlural: true,
-			schema: {
-				users: betterAuthSchemas.usersTable,
-				sessions: betterAuthSchemas.sessionsTable,
-				accounts: betterAuthSchemas.accountsTable,
-				verifications: betterAuthSchemas.verificationsTable
-			}
 		}),
 		advanced: {
 			crossSubDomainCookies: {

@@ -2,13 +2,11 @@
 	"name": "example",
 	"type": "module",
 	"scripts": {
-		"wrangler": "wrangler dev src/index.ts --port 3000",
 		"generate-better-auth-schemas": "cf-script ./scripts/generate-better-auth-schemas.ts"
 	},
 	"dependencies": {
 		"better-auth": "^1.1.15",
-		"drizzle-orm": "^0.39.1",
-		"hono": "^4.6.19"
+		"drizzle-orm": "^0.39.1"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250109.0",
