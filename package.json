@@ -2,7 +2,8 @@
 	"name": "example",
 	"type": "module",
 	"scripts": {
-		"generate-better-auth-schemas": "cf-script ./scripts/generate-better-auth-schemas.ts"
+		"generate-better-auth-schemas": "cf-script ./scripts/generate-better-auth-schemas.ts",
+		"generate-better-auth-schemas-dev": "cf-script ./scripts/generate-better-auth-schemas.ts --env dev"
 	},
 	"dependencies": {
 		"better-auth": "^1.1.15",

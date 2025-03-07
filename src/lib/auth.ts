@@ -8,11 +8,6 @@ export const initBetterAuth = (env: Env) => {
 		database: drizzleAdapter(drizzle(env.DB), {
 			provider: "sqlite",
 		}),
-		advanced: {
-			crossSubDomainCookies: {
-				enabled: true
-			}
-		},
 		trustedOrigins: env.TRUSTED_ORIGINS,
 		secondaryStorage: {
 			get(key) {
